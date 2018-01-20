@@ -1,4 +1,8 @@
 <h1>Artists</h1>
+<% flash.each do |name, message| %>
+  <%= content_tag :div, message, class: name %>
+<% end %>
+
 <ul>
   <% @artists.each do |artist| %>
     <li><%= link_to artist.name, artist_path(artist) %></li>
